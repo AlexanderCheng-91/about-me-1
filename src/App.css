@@ -1,5 +1,36 @@
+/* creating css selector and declaring your css selectors after bootstrap styles will override bootstrap */
+/* read bootstrap LESS and SASS documentation to understand it better */
+.about-me {
+  display: block;
+  position: static;
+  padding-top: 5%;
+}
+
+.about-me .body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.about-me .title {
+  font-family: Georgia, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* tried to select background with a silly class */
+
+.AppBackgroundSelector {
+  background-image: url("https://hookagency.com/wp-content/uploads/2015/11/hazemaster-gray-gradient-ui-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
@@ -7,32 +38,98 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  max-width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #343a40;
+}
+
+.img-stack {
+  /* display: grid; */
+  /* grid-template-columns: repeat(12, 1fr); */
+  position: flex;
+  max-width: 100%;
+  padding: 0%;
+  height: auto;
+}
+
+.img-stack_item-top {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+.img-stack_item-bottom {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap !important;
+  padding-left: 100%;
+  margin-right: 5%;
+}
+
+.navbar {
+  padding: 0%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.navbar-brand {
+  margin-left: 95%;
+}
+
+/* padding vs margin */
+
+.navbar-navLink {
+  padding: 0%;
+}
+
+.p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rowing {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-right: 91%;
+}
+
+.smallPic {
+  margin: auto;
+  width: 100%;
+}
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
